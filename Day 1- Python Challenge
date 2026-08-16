@@ -1,0 +1,13 @@
+steps=[1,1,1,1,0,1,1]
+total_battery=0
+consecutive_steps=0
+for step in steps:
+    if step==1:
+        consecutive_steps+=1
+        if consecutive_steps==4:
+            total_battery+=4
+        else:
+            total_battery+=2
+    else:
+        consecutive_steps=0
+print("Total Battery Used:",total_battery,"units")
